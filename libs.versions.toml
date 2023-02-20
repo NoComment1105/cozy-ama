@@ -1,0 +1,31 @@
+[versions]
+# Plugins
+kotlin = "1.8.10"
+shadow = "7.1.2"
+detekt = "1.22.0"
+git-hooks = "0.0.2"
+licenser = "0.6.1"
+
+# Libraries
+kord-extensions = "1.5.6-SNAPSHOT"
+logging = "3.0.5"
+logback = "1.4.5"
+kmongo = "4.8.0"
+
+[libraries]
+kord-extensions-core = { module = "com.kotlindiscord.kord.extensions:kord-extensions", version.ref = "kord-extensions" }
+kord-extensions-unsafe = { module = "com.kotlindiscord.kord.extensions:unsafe", version.ref = "kord-extensions"}
+kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib" }
+logging = { module = "io.github.microutils:kotlin-logging", version.ref = "logging" }
+logback = { module = "ch.qos.logback:logback-classic", version.ref = "logback" }
+kmongo = { module = "org.litote.kmongo:kmongo-coroutine-serialization", version.ref = "kmongo" }
+detekt = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detekt"}
+detekt-libraries = { module = "io.gitlab.arturbosch.detekt:detekt-rules-libraries", version.ref = "detekt" }
+
+[plugins]
+kotlin = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+shadow = { id = "com.github.johnrengelman.shadow", version.ref = "shadow" }
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
+git-hooks = { id = "com.github.jakemarsden.git-hooks", version.ref = "git-hooks" }
+licenser = { id = "org.cadixdev.licenser", version.ref = "licenser" }
